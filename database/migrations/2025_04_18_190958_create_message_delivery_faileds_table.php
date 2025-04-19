@@ -18,7 +18,7 @@ return new class extends Migration
             $table->text('output')->nullable();
             $table->string('time', 255)->nullable();
             $table->boolean('sent_with_ssl')->nullable();
-            $table->string('timestamp', 255)->nullable();
+            $table->string('timestamp', 255)->nullable(); // Optional
             $table->integer('message_id')->nullable();
             $table->string('message_token', 255)->nullable();
             $table->string('message_direction', 50)->nullable();

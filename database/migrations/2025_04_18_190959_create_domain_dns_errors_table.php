@@ -25,7 +25,7 @@ return new class extends Migration
             $table->string('return_path_status', 50)->nullable();
             $table->text('return_path_error')->nullable();
             $table->string('event', 50)->nullable();
-            $table->string('timestamp', 255)->nullable();
+            $table->string('timestamp', 255)->nullable(); // Optional
             $table->timestamps();
             $table->softDeletes();
         });

@@ -38,7 +38,7 @@ return new class extends Migration
             $table->text('org_system')->nullable();
             $table->bigInteger('date_linux')->nullable();
             $table->string('event', 50)->nullable();
-            $table->string('timestamp', 255)->nullable();
+            $table->string('timestamp', 255)->nullable(); // Optional
             $table->string('uuid', 100)->nullable();
             $table->timestamps();
             $table->softDeletes();

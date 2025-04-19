@@ -11,6 +11,7 @@ class MessageLinkClicked extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
+        'url',
         'token',
         'ip_address',
         'user_agent',

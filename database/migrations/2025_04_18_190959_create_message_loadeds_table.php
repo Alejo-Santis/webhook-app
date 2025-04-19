@@ -13,6 +13,23 @@ return new class extends Migration
     {
         Schema::create('message_loadeds', function (Blueprint $table) {
             $table->id();
+            $table->string('ip_address', 45)->nullable();
+            $table->text('user_agent')->nullable();
+            $table->integer('message_id')->nullable();
+            $table->string('message_token', 255)->nullable();
+            $table->string('message_direction', 50)->nullable();
+            $table->string('message_message_id', 255)->nullable();
+            $table->string('message_to', 255)->nullable();
+            $table->string('message_from', 255)->nullable();
+            $table->text('message_subject')->nullable();
+            $table->string('message_timestamp')->nullable();
+            $table->string('message_spam_status', 50)->nullable();
+            $table->string('message_tag', 255)->nullable();
+            $table->text('org_system')->nullable();
+            $table->bigInteger('date_linux')->nullable();
+            $table->string('event', 50)->nullable();
+            $table->string('timestamp')->nullable(); // Optional
+            $table->string('uuid', 100)->nullable();
             $table->timestamps();
         });
     }
