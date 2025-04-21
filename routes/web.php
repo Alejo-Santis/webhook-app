@@ -6,6 +6,3 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::post('/webhook', [WebhookController::class, 'process'])
-    ->middleware('trusted.ips');
