@@ -38,7 +38,8 @@ class WebHookEventTest extends TestCase
             ]
         ];
 
-        $response = $this->postJson('/webhook', $payload);
+        $response = $this->withServerVariables(['REMOTE_ADDR' => '3.225.193.50'])
+            ->postJson('/api/webhook', $payload);
 
         $response->assertStatus(200)
             ->assertJson([
